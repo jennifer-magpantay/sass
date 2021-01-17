@@ -1,0 +1,19 @@
+{
+  "name": "kfwebsite-freela",
+  "version": "1.0.0",
+  "description": "Website developed for a company called Kaca Falcao, using HTML & CSS/Sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "HMTL",
+    "CSS",
+    "Sass"
+  ],
+  "author": "Jennifer Magpantay",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.32.4"
+  }
+}

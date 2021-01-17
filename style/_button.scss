@@ -1,0 +1,26 @@
+button {
+    margin: 1em 0;
+    padding: 0.63em 1.5em;
+    background-color: $pink;
+    border: none;
+    border-radius: 30px;
+    color: $text-color;
+    cursor: pointer;
+    
+    @include font-text;
+    font-weight: bold;
+
+    @include box-shadow--pink();
+   
+    &:hover {
+        background-color: $blue;
+        transition: all 0.3s ease;
+        z-index: 2;
+
+        @include box-shadow--blue();
+    }
+
+    @include tablet{
+        font-size: 1em;
+    }
+}

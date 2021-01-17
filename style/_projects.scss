@@ -1,0 +1,50 @@
+.projects {
+    @include col-10;
+
+    h2 {
+        text-align: center;
+    }
+
+    .project__wrapper {
+        width: 100;
+        height: auto;
+
+        .img__container {
+            width: auto;
+            height: auto;
+            display: flex;
+            margin: 2% 0;
+            scrollbar-color: $bc-color;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            overflow-x: scroll;
+           
+            img {
+                object-fit: contain;
+                width: 500px;
+                height: auto;
+                margin-right: 0.5em;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: transform 600ms;
+
+                &:hover {
+                    transform: scale(1.02);
+                }
+
+                @include tablet {
+                    width: 400px; 
+                }
+
+                @include mobile {
+                    width: 300px; 
+                }
+            }
+        }
+    }
+    .container--md {
+        @include tablet {
+            width: 100%; 
+        }
+    }
+}

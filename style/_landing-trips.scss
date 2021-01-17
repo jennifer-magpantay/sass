@@ -1,0 +1,36 @@
+.landing-trips {
+    span {
+        color: $blue;
+        font-weight: bold;
+    }
+
+    .container--flex {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .container--md:nth-child(1) {
+        height: 70vh;
+    }
+
+    .container--md:nth-child(2) {
+        padding-right: 6%;
+        text-align: right;
+
+        @include mobile {
+            @include col-10;
+            
+            text-align: left;
+        }
+    }
+
+    img {
+        max-width: 48em;
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: -5em;
+        left: -3.4em;
+        z-index: 0;
+    }
+}

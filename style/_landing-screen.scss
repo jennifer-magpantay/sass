@@ -1,0 +1,105 @@
+.landing-screen {
+    @include col-10;
+
+    h1 {
+        @include font-title;
+    }
+
+    h2 {
+        color: $bc-color;
+    }
+
+    p {
+        color: $bc-color;
+    }
+
+    .container--md:nth-child(2){
+        h2 {
+            margin-left: auto;            
+            text-align: right;
+        }
+    }       
+
+    .anchor__link {
+        margin: 3em 0 2em;
+        text-align: center;
+
+        h2 {
+            @include font-subtitle;
+            margin-bottom: 0.35em;
+            color: $off-white;           
+        }
+    }
+
+    .narrow--down--icon {
+        width: auto;
+        height: 1.5em;
+    }
+}
+
+/* ---------- ANIMATIONS ---------- */
+
+/* DARK -> WHITE */
+.fade {
+    animation: fadein 3.5s;
+    animation-fill-mode: forwards;
+    background-color: $bc-color;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        background-color: unset;
+        color: $text-color;
+        opacity: 1;
+    }
+}
+
+/* DARK -> GREY */
+.fade--off-white {
+    animation: fadein-off-white 3.5s;
+    animation-fill-mode: forwards;
+    background-color: $bc-color;
+}
+
+@keyframes fadein-off-white {
+    from {
+        opacity: 0;
+    }
+    to {
+        background-color: unset;
+        color: $off-white;
+        opacity: 1;
+    }
+}
+
+/* FADE DELAYS */
+.delay--1 {
+    animation-delay: 1s;
+}
+
+.delay--2 {
+    animation-delay: 1.3s;
+}
+
+.delay--3 {
+    animation-delay: 2s;
+}
+
+.delay--4 {
+    animation-delay: 2.3s;
+
+    @include mobile {
+        animation-delay: 1.3s;
+    }
+}
+
+.delay--5 {
+    animation-delay: 3s;
+
+    @include mobile {
+        animation-delay: 2s;
+    }
+}

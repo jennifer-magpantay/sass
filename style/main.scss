@@ -1,0 +1,211 @@
+/* ---------- RESET ---------- */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* ---------- FONTS ---------- */
+@font-face {
+    font-family: "montserrat-regular";
+    src: url("../fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: "montserrat-bold";
+    src: url("../fonts/Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: "montserrat-extrabold";
+    src: url("../fonts/Montserrat-ExtraBold.ttf");
+}
+
+/* ---------- GLOBAL VARIABLES ---------- */
+//   COLORS
+$bc-color: #080d1d;
+$text-color: #ffffff;
+$blue: #109aba;
+$pink: #da3c77;
+$purple: #c570e2;
+$off-white: #bcbcbc;
+
+//   DIMENSIONS
+
+@mixin col-10 {
+    width: 83.33%;
+    margin: 0 auto;
+    padding: 1em 0;
+}
+
+// BOX-SHADOW
+@mixin box-shadow--pink() {
+    box-shadow: 0px 1px 10px 0px rgba(218, 60, 19, 0.75);
+}
+
+@mixin box-shadow--blue() {
+    box-shadow: 0px 1px 10px 0px rgba(16, 154, 186, 0.75);
+}
+
+// QUERIES
+$laptop: 1024px;
+@mixin laptop {
+    @media (max-width: #{$laptop}) {
+        @content;
+    }
+}
+
+$tablet: 800px;
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+$mobile: 600px;
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+// FONTS
+@mixin font-title {
+    margin-bottom: 0.35em;
+    font-family: "montserrat-extrabold";
+    font-size: 3.25em; //52px
+
+    @include tablet {
+        font-size: 2em; //32px
+    }
+
+    @include mobile {
+        font-size: 1.5em; //24px
+    }
+}
+
+@mixin font-subtitle {
+    margin-bottom: 1em;
+    font-family: "montserrat-bold";
+    font-size: 1.5em; //24px
+
+    @include tablet {
+        font-size: 1.13em; //18px
+    }
+
+    @include mobile {
+        font-size: 1em; //16px
+    }
+}
+
+@mixin font-text {
+    margin-bottom: 0.88em;
+    font-family: "montserrat-regular";
+    font-size: 1.13em; //18px
+
+    @include tablet {
+        font-size: 1em; //16px
+    }
+
+    @include mobile {
+        font-size: 0.88em; //14px
+    }
+}
+
+/* ---------- GLOBAL STYLES ---------- */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: $bc-color;
+    color: $text-color;
+
+    p {
+        @include font-text;
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+section {
+    h2 {
+        @include font-subtitle;
+    }
+}
+// CONTAINERS
+.container--flex {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.container--sm {
+    display: flex;
+    height: auto;
+    flex: 0 1 33%;
+    flex-wrap: wrap;
+    flex-flow: column;
+    padding-right: 1%;
+    margin-bottom: 1.5em;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    @include mobile {
+        flex: 0 1 100%;
+    }
+}
+
+.container--md {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    align-items: baseline;
+    justify-content: center;
+    margin: 1% 0;
+
+    @include mobile {
+        width: 100%;
+    }
+}
+
+.container--center {
+    width: 75%;
+    display: flex;
+    flex-flow: column;
+    padding: 0 6%;
+    margin: 0 auto;
+    text-align: center;
+    
+    @include mobile {
+        width: 100%;
+    }
+}
+
+.hidden {
+    @include mobile {
+        display: none;
+    }
+}
+
+// Add all imports
+@import "button", "header", "landing-screen", "worlds", "landing-trips", "projects", "dreamers", "contact";

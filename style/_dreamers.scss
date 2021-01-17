@@ -1,0 +1,59 @@
+.dreamers {
+    @include col-10;
+
+    h2 {
+        @include font-title;
+    }
+
+    span {
+        color: $pink;
+    }
+
+    .container--flex {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .wrapper {
+        p:nth-child(1) {
+            @include font-title;
+            text-align: left;
+        }
+    }
+
+    img {
+        max-width: 50%;
+        width: auto;
+        height: auto;
+        }
+
+    .img--profile {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+
+        @include mobile{
+            max-width: 75%;
+        }
+    }
+
+    .container--md:nth-child(2) {
+        img {
+            margin-left: auto;
+        }
+    }
+
+    .container--profile {
+        width: 100%;
+        height: auto;
+        padding: 3%;
+        margin: 2% 0;
+        border: 2px solid $blue;
+        border-radius: 8px;
+        text-align: justify;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

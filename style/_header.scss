@@ -1,0 +1,28 @@
+header {
+    @include col-10;
+
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $bc-color;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+
+    @include tablet {
+        width: 150px;
+        height: auto;
+    }
+}
+
+.link--whatsapp {
+    @include font-text;
+    font-weight: bold;
+
+    color: $pink;
+}
