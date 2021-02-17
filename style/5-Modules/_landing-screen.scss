@@ -1,0 +1,33 @@
+.landing-screen {
+    @include col-10;
+
+    h2 {
+        color: $bc-color;
+    }
+
+    p {
+        color: $bc-color;
+    }
+
+    .container--md:nth-child(2){
+        h2 {
+            margin-left: auto;            
+            text-align: right;
+        }
+    }       
+
+    .anchor__link {
+        margin: 3em 0 2em;
+        color: $off-white;           
+        text-align: center;
+        h3 {
+            margin: 0 0 0.5em 0;
+        }
+    }
+
+    .narrow--down--icon {
+        width: auto;
+        height: 2em;
+    }
+}
+

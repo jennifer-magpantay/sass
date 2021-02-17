@@ -4,23 +4,17 @@ button {
     background-color: $pink;
     border: none;
     border-radius: 30px;
+    box-shadow: $box-shadow--pink;   
     color: $text-color;
     cursor: pointer;
-    
-    @include font-text;
     font-weight: bold;
+    outline: none;    
+    @include font-text;
 
-    @include box-shadow--pink();
-   
     &:hover {
         background-color: $blue;
+        box-shadow: $box-shadow--blue;   
         transition: all 0.3s ease;
         z-index: 2;
-
-        @include box-shadow--blue();
-    }
-
-    @include tablet{
-        font-size: 1em;
     }
 }

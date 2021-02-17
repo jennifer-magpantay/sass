@@ -1,0 +1,23 @@
+/* ---------- MIXINS ---------- */
+//   DIMENSIONS
+@mixin col-10 {
+    width: 83.33%;
+    margin: 0 auto;
+    padding: 1em 0;
+}
+
+// FONTS
+@mixin font-title {
+    margin-bottom: 0.35em;
+    font-family: "montserrat-extrabold";    
+}
+
+@mixin font-subtitle {
+    margin-bottom: 1em;
+    font-family: "montserrat-bold";    
+}
+
+@mixin font-text {
+    margin-bottom: 0.88em;
+    font-family: "montserrat-regular";    
+}

@@ -21,8 +21,7 @@ header {
 }
 
 .link--whatsapp {
-    @include font-text;
-    font-weight: bold;
-
     color: $pink;
+    font-weight: bold;
+    @include font-text;
 }

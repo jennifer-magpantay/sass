@@ -14,11 +14,8 @@
             height: auto;
             display: flex;
             margin: 2% 0;
-            scrollbar-color: $bc-color;
-            overflow-y: hidden;
-            overflow-x: hidden;
             overflow-x: scroll;
-           
+
             img {
                 object-fit: contain;
                 width: 500px;
@@ -27,24 +24,25 @@
                 border-radius: 8px;
                 cursor: pointer;
                 transition: transform 600ms;
-
+                    overflow: hidden;
+                    
                 &:hover {
                     transform: scale(1.02);
                 }
 
                 @include tablet {
-                    width: 400px; 
+                    width: 400px;
                 }
 
                 @include mobile {
-                    width: 300px; 
+                    width: 300px;
                 }
             }
         }
     }
     .container--md {
         @include tablet {
-            width: 100%; 
+            width: 100%;
         }
     }
 }
