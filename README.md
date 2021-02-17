@@ -4,7 +4,7 @@
 
 ---
 
-After a few well-spent hours of personal studies to know better this CSS extention language, I decided to give it a go and apply what I have seen so far about Sass into old repositories. My first try is to revamp a website I have worked on before as a freelancer. At the end, I came up with a more well structure project, using BEM as my favo naming convetion, spliting my style shees into partials components and having fun creating resuable codes.  
+After a few well-spent hours of personal studies to know better this CSS extention language, I decided to give it a go and apply what I have seen so far about Sass into old repositories. My first try is to revamp a website I have worked on before as a freelancer. At the end, I came up with a more well structured project, using BEM as my favo naming convetion, spliting my style shees into partials components and having fun creating resuable codes.  
 
 This is so far, the best way to apply style into webpages. It is a way more organized, clean, easy to understand and less lines of code for any project. 
 
