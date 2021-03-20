@@ -1,48 +1,98 @@
 .projects {
-    @include col-10;
-
+    padding: 0 6%;
+    
     h2 {
         text-align: center;
     }
 
-    .project__wrapper {
-        width: 100;
-        height: auto;
+    &__slider {
+        padding: 1em 0 0 0;
+        overflow: hidden;
 
-        .img__container {
+        .anchor__list {
             width: auto;
-            height: auto;
+            margin: 0 auto;
+            padding: 0 0 1em 0;
+            font-size: 1.4rem;
+            text-align: center;
+
+            &--item {
+                @include font-text;
+                width: 2.5em;
+                height: 2.5em;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 1em;
+                background-color: #fff;
+                border-radius: 50%;
+                font-weight: bold;
+                list-style: none;
+                color: #282828;
+                transition: all 0.5s ease;
+
+                &:hover,
+                &:focus {
+                    background-color: transparent;
+                    border: 2px solid #fff;
+                    color: #fff;
+                }
+            }
+        }
+
+        .slides__container {
             display: flex;
-            margin: 2% 0;
+            overflow: hidden;
             overflow-x: scroll;
+            scroll-behavior: smooth;
+            scrollbar-color: transparent transparent; /* thumb and track color */
+            scrollbar-width: 0px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+
+            // setting scrollbar style
+            &::-webkit-scrollbar {
+                width: 0px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                width: 10px;
+                background-color: #fff;
+                border: none;
+                border-radius: 1em;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: transparent;
+            }
+
+            & > a {
+                margin-top: 0;
+
+                &:not(:last-child) {
+                    margin-right: 1em;
+                }
+            }
 
             img {
+                // object-fit: cover;
                 object-fit: contain;
-                width: 500px;
+                width: 425px;
                 height: auto;
-                margin-right: 0.5em;
+                position: relative;
+                margin: 0 0 0.5em;
                 border-radius: 8px;
                 cursor: pointer;
-                transition: transform 600ms;
-                    overflow: hidden;
-                    
-                &:hover {
-                    transform: scale(1.02);
-                }
+                scroll-snap-align: start;
 
-                @include tablet {
-                    width: 400px;
-                }
-
-                @include mobile {
-                    width: 300px;
+                @include mobile-up {
+                    width: 500px;
                 }
             }
         }
     }
-    .container--md {
-        @include tablet {
-            width: 100%;
-        }
+
+    .calculator__container {
+        margin-top: 4em;
     }
 }

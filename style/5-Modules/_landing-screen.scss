@@ -1,33 +1,54 @@
-.landing-screen {
-    @include col-10;
+.hero {
+    padding: 0 6%;
 
-    h2 {
-        color: $bc-color;
-    }
-
-    p {
-        color: $bc-color;
-    }
-
-    .container--md:nth-child(2){
-        h2 {
-            margin-left: auto;            
-            text-align: right;
+    &__container {
+      @include tablet-up {
+          display: flex;
+      }
         }
-    }       
+
+        .container--md {
+            margin-top: 0;
+            // setting h2 and p with bc-color for the animations initally
+            h2 {
+                color: $bc-color;
+            }
+
+            p {
+                color: $bc-color;
+            }
+        }
+
+        .container--md:nth-child(2) {
+            h2 {
+                margin-left: auto;
+                text-align: right;
+            }
+        }
+    }
 
     .anchor__link {
-        margin: 3em 0 2em;
-        color: $off-white;           
+        margin-top: 4em;
+        color: $off-white;
         text-align: center;
-        h3 {
-            margin: 0 0 0.5em 0;
+
+        .outline__link {
+            &::before {
+                background-color: $text-color;
+            }
         }
     }
 
     .narrow--down--icon {
-        width: auto;
-        height: 2em;
+        width: 1em;
+        margin: 1em auto 0;
+        cursor: pointer;
+        // add animation to icon
+        animation: bouncing 1s ease-in alternate infinite;
+
+        // stop animation when hover it
+        &:hover {
+            animation-play-state: paused;
+        }
     }
-}
 

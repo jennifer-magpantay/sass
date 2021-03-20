@@ -1,16 +1,50 @@
 .contact {
-    @include col-10;
+  padding: 0 6%;
 
-    .container--flex {
-        align-items: flex-start;
-        margin-top: 2em;
-    }
+  h2 {
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
 
-    h2 {
-        text-align: center;
-    }
+  &__description {
+    width: 75%;
+    text-align: center;
+  }
+
+  &__container {
+    margin: 3em 0;
 
     span {
-        color: $pink;
+      color: $pink;
     }
+
+    @include mobile-up {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  &--details {
+    padding-right: 1%;
+    margin: 2em 0;
+
+    & > a {
+      padding: 0;
+    }
+
+    .outline__link {
+        &::before {
+            background-color: $text-color;
+        }
+    }
+
+    @include tablet-up {
+      flex: 0 1 30%;
+    }
+  }
+
+  .container--center {
+    margin-top: 1em;
+  }
 }

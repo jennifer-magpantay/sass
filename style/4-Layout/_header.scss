@@ -1,27 +1,23 @@
 header {
-    @include col-10;
-
-    height: 85px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex-center-space-between;
+    padding: 2% 6%;
     background-color: $bc-color;
-    overflow: hidden;
-    z-index: 2;
-}
 
-.logo {
-    width: 200px;
-    height: auto;
+    .link--whatsapp {
+        @include font-text;
+        margin: 0;
+        color: $pink;
+        font-weight: bold;
 
-    @include tablet {
-        width: 150px;
+        .outline__link {
+            &::before {
+                background-color: $pink;
+            }
+        }
+    }
+
+    .logo {
+        width: clamp(15rem, 18vw, 20rem);
         height: auto;
     }
-}
-
-.link--whatsapp {
-    color: $pink;
-    font-weight: bold;
-    @include font-text;
 }

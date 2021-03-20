@@ -1,5 +1,5 @@
 .dreamers {
-    @include col-10;
+    padding: 0 6%;
 
     h2 {
         @include font-title;
@@ -10,51 +10,64 @@
         color: $pink;
     }
 
-    .container--flex {
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .wrapper {
-        p:nth-child(1) {
-            @include font-title;
-            text-align: left;
-        }
-    }
-
-    img {
-        max-width: 50%;
-        width: auto;
-        height: auto;
+    &__header {
+       
+       h2 {
+            width: 75%;
         }
 
-    .img--profile {
-        max-width: 100%;
-        width: auto;
-        height: auto;
-
-        @include mobile{
-            max-width: 75%;
-        }
-    }
-
-    .container--md:nth-child(2) {
         img {
-            margin-left: auto;
+            width: 40%;
+            margin-top: 0;
+        }
+
+        @include tablet-up {
+            display: flex;
+            justify-content: space-between;
         }
     }
 
-    .container--profile {
-        width: 100%;
-        height: auto;
-        padding: 3%;
-        margin: 2% 0;
-        border: 2px solid $blue;
-        border-radius: 8px;
-        text-align: justify;
+    &__container {
+     
+        .profile {
+            text-align: center;
+            
+            &__img {
+                width: 75%;
 
-        p {
-            margin-bottom: 0;
+                @include tablet-up {
+                    width: 100%;
+                }
+            }
+                    }
+
+        .bio {
+            &__description {
+                padding: 1em;
+                border: 2px solid $blue;
+                border-radius: 8px;
+                line-height: 24px;
+            }
+        }
+    }
+
+    &--felipe,
+    &--elo {
+        @include tablet-up {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &--elo {
+        @include tablet-up {
+            .profile {
+                order: 2;
+            }
+
+            .bio {
+                order: 1;
+            }
         }
     }
 }

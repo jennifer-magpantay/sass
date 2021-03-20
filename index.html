@@ -18,22 +18,19 @@
 <body>
 
     <header>
-        <a href="#home">
-            <img class="logo" src="./images/logo.png" alt="Kaça Falcão Logo" title="Logotipo Kaça Falcão" />
-        </a>
+        <!-- logo -->
+        <img class="logo" src="./images/logo.png" alt="Kaça Falcão Logo" title="Logotipo Kaça Falcão" />
+
         <!-- whatsapp link -->
-        <a class="link--whatsapp" href="https://api.whatsapp.com/send?phone=5511957283051">CHAMA
-            NO ZAP 📱
-        </a>
+        <h3 class="link--whatsapp"><a class="outline__link"
+                href="https://api.whatsapp.com/send?phone=5511957283051">CHAMA
+                NO ZAP 📱
+            </a></h3>
     </header>
 
     <main>
-
-        <section class="landing-screen">
-            <!-- anchor link to the home page -->
-            <a name="home"></a>
-
-            <div class="container--flex">
+        <section class="hero">
+            <div class="hero__container">
                 <div class="container--md">
                     <h1 class="fade">Sim, nós fazemos aplicativos.</h1>
 
@@ -53,7 +50,6 @@
                 </div>
 
                 <div class="container--md hidden">
-
                     <h2 class="fade delay--2">E sites também
                     </h2>
 
@@ -63,19 +59,19 @@
             </div>
 
             <!-- ancor link -->
-            <div class="container--center">
-                <a href="#contact" class="anchor__link">
-                    <h3>Vem criar com a gente</h3>
-                    <!-- narrow down icon / image -->
-                    <img class="narrow--down--icon" src="/images/setaBaixo.png" alt="Seta indicando para
-                            baixo" />
-                </a>
-            </div>
+            <div class="anchor__link">
+                <h3><a class="outline__link" href="#contact">
+                        Vem criar com a gente
+                    </a></h3>
 
+                <!-- narrow down icon / image -->
+                <a href="#contact"><img class="narrow--down--icon" src="/images/setaBaixo.png"
+                        alt="Seta indicando para baixo" /></a>
+            </div>
         </section>
 
         <section class="worlds">
-            <div class="container--center">
+            <div class="section__container--description">
                 <h2>O melhor dos dois mundos</h2>
 
                 <p>Nós buscamos a flexibilidade e capacidade dos freelancers
@@ -83,13 +79,15 @@
                     isso com a
                     confiança e organização de uma empresa tradicional!</p>
             </div>
-            <!-- image: worlds + spaceship -->
-            <img src="images/Foguetes.png" alt="Imagem de dois circulos: um em tons roxeados e outro em
-                    tons de azul com um foguete ao centro" title="O melhor do dois mundos" />
 
-            <div class="container--flex">
-                <div class="container--md">
-                    <div class="text--freelancers">
+            <!-- image: worlds + spaceship -->
+            <div class="frame__container">
+                <div class="frame__img"></div>
+            </div>
+
+            <div class="worlds__container">
+                <div class="freelancers__container">
+                    <div class="freelancers__text">
                         <p>Achar pessoas de confiança não é uma tarefa
                             fácil. Muitas vezes ficamos com o pé atrás
                             sobre
@@ -101,13 +99,13 @@
 
                     <!-- button / link -->
                     <a href="https://drive.google.com/file/d/11UQtZS3jWGo0S1bEl71iMfDJrs8V3iPa/view?usp=sharing">
-                        <button class="button--display--lg hidden">Conheça mais do
+                        <button class="hidden">Conheça mais do
                             nosso processo</button>
                     </a>
                 </div>
 
-                <div class="container--md">
-                    <div class="text--companies">
+                <div class="companies__container">
+                    <div class="companies__text">
                         <p>Empresas de desenvolvimento possuem uma estrutura
                             que garantem confiabilidade.</p>
 
@@ -128,19 +126,17 @@
                     </a>
                 </div>
             </div>
-
         </section>
 
         <section class="landing-trips">
-
-            <div class="container--flex">
-                <div class="container--md hidden">
+            <div class="landing-trips__container">
+                <div class="image__container hidden">
                     <!-- spaceship image -->
                     <img src="./images/fogueteInclinado.png" alt="Foguete
                             Inclinado" title="Foguete inclinado" />
                 </div>
 
-                <div class="container--md">
+                <div class="description__container">
                     <h2>A gente viaja</h2>
                     <p>Somos apaixonados por ideias, pois elas nos movem e
                         nos dão direção. O nosso objetivo é te ajudar
@@ -161,180 +157,172 @@
                         <button>Quero fazer um workshop</button></a>
                 </div>
             </div>
-
         </section>
 
         <section class="projects">
-
             <h2>Aonde já pousamos</h2>
-            <!-- carousel with projects -->
-            <div class="project__wrapper">
-                <div class="img__container">
+            <!-- projects displayed as slides -->
+            <div class="projects__slider">
+                <!-- bullets will be displayed as a anchor list -->
+                <ul class="anchor__list">
+                    <!-- eache item of the list refers/links to a image -->
+                    <li class="anchor__list--item"><a href="#slide-1" class="anchor__list--link">1</a></li>
+                    <li class="anchor__list--item"><a href="#slide-2" class="anchor__list--link">2</a></li>
+                    <li class="anchor__list--item"><a href="#slide-3" class="anchor__list--link">3</a></li>
+                    <li class="anchor__list--item"><a href="#slide-4" class="anchor__list--link">4</a></li>
+                </ul>
 
-                    <a href="https://dribbble.com/shots/13925090-Autee-Dribble">
+                <!-- set a containder for the slides -->
+                <div class="slides__container">
+                    <!-- and the slides as link, followed byt its own image -->
+                    <a id="slide-1" href="https://dribbble.com/shots/13925090-Autee-Dribble">
                         <img src="images/autee.png" alt="Autee Project
-                                Screen Presentation" /></a>
+                                    Screen Presentation" /></a>
 
-                    <a href="https://dribbble.com/shots/13918347-Lucca-Comunica-o-alternativa">
+                    <a id="slide-2" href="https://dribbble.com/shots/13918347-Lucca-Comunica-o-alternativa">
                         <img src="images/lucca.png" alt="Lucca Project
                                 Screen Presentation" /></a>
 
-                    <a href="https://dribbble.com/shots/13925080-Synchs">
+                    <a id="slide-3" href="https://dribbble.com/shots/13925080-Synchs">
                         <img src="images/synchs.png" alt="Synchs Project
-                                Screen Presentation" /></a>
+                                    Screen Presentation" /></a>
 
-                    <a href="https://dribbble.com/shots/13925055-Decora">
+                    <a id="slide-4" href="https://dribbble.com/shots/13925055-Decora">
                         <img src="images/decora.png" alt="Decora Project Screen Presentation" /></a>
                 </div>
             </div>
 
-            <div class="container--flex">
-                <div class="container--md">
-                    <p>Quer fazer parte dessa lista mas não sabe por onde
-                        começar?</p>
+            <div class="calculator__container">
+                <p>Quer fazer parte dessa lista mas não sabe por onde
+                    começar?</p>
 
-                    <p> A gente te
-                        dá uma média
-                        de quanto isso poderia custar fazendo com a gente</p>
+                <p> A gente te
+                    dá uma média
+                    de quanto isso poderia custar fazendo com a gente</p>
 
-                    <!-- button / link -->
-                    <a href="https://airtable.com/shro6ihHkViVjV5vx"><button>Quanto
-                            custa meu app?</button></a>
-                </div>
-
-                <div class="container--md"></div>
+                <!-- button / link -->
+                <a href="https://airtable.com/shro6ihHkViVjV5vx"><button>Quanto
+                        custa meu app?</button></a>
             </div>
-
         </section>
 
         <section class="dreamers">
-
-            <div class="container--flex">
-                <div class="wrapper">
+            <div class="dreamers__header">
+                <div>
                     <h2>THE DREAMERS.</h2>
                     <p>Uma dupla de muitos.</p>
                 </div>
+
                 <!-- meteoro img -->
                 <img class="hidden" src="./images/Meteoro.png" alt="Meteoro" title="Imagem de um Meteoro" />
             </div>
 
-            <div class="container--flex">
-                <!-- Felipe Kaca picture -->
-                <div class="container--md">
-                    <img class="img--profile" src="./images/Felipe.png" alt="Felipe Kaca picture profile" />
-                </div>
-                <!-- bio -->
-                <div class="container--md">
-                    <h2>Felipe <span>Kaça</span></h2>
-                    <div class="container--profile">
-                        <p>Estudante de Ciência da Computação e aluno da
-                            Apple
-                            Developer
-                            Academy | Mackenzie, é
-                            desenvolvedor iOS desde 2018. Apaixonado por
-                            design e UX e entusiasta na hora de
-                            desenvolver
-                            o melhor produto.
-                        </p>
+            <div class="dreamers__container">
+                <!-- Felipe Kaca -->
+                <div class="dreamers--felipe">
+                    <div class="profile">
+                        <img class="profile__img" src="./images/Felipe.png" alt="Felipe Kaca picture profile" />
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="dreamers">
-            <div class="container--flex">
-                <!-- Eloisa Falcao bio -->
-                <div class="container--md">
-                    <h2>Eloisa <span>Falcão</span></h2>
-                    <div class="container--profile">
-                        <p>Estudante de Publicidade e Propaganda e aluna da
-                            Apple
-                            Developer Academy | Mackenzie, e
-                            tem
-                            trabalhado com design e desenvolvimento iOS a
-                            quase dois anos. Comandante da
-                            @zeroeumas,
-                            e
-                            entusiasta quanto o assunto é fazer grandes
-                            ideias acontecerem.</p>
+                    <!-- bio -->
+                    <div class="bio">
+                        <h2>Felipe <span>Kaça</span></h2>
+                        <div class="bio__description">
+                            <p>Estudante de Ciência da Computação e aluno da
+                                Apple
+                                Developer
+                                Academy | Mackenzie, é
+                                desenvolvedor iOS desde 2018. Apaixonado por
+                                design e UX e entusiasta na hora de
+                                desenvolver
+                                o melhor produto.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="container--md">
-                    <!-- Eloisa Falcao picture -->
-                    <img class="img--profile eloisa" src="./images/Eloisa.png" alt="Eloisa Falcao picture
+                <!-- Eloisa Falcao  -->
+                <div class="dreamers--elo">
+                    <div class="profile">
+                        <!-- Eloisa Falcao picture -->
+                        <img class="profile__img eloisa" src="./images/Eloisa.png" alt="Eloisa Falcao picture
                             profile" />
+                    </div>
+
+                    <div class="bio">
+                        <h2>Eloisa <span>Falcão</span></h2>
+                        <div class="bio__description">
+                            <p>Estudante de Publicidade e Propaganda e aluna da
+                                Apple
+                                Developer Academy | Mackenzie, e
+                                tem
+                                trabalhado com design e desenvolvimento iOS a
+                                quase dois anos. Comandante da
+                                @zeroeumas,
+                                e
+                                entusiasta quanto o assunto é fazer grandes
+                                ideias acontecerem.</p>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </section>
 
-        <!-- adding: anchor link for contact -->
-        <a name="contact"></a>
-
-        <section class="contact">
+        <!-- adding anchor id for contact -->
+        <section id="contact" class="contact">
             <h2>Curtiu a Kaça Falcão?</h2>
-            <div class="container--center">
+            <div class="section__container--description">
                 <p><span>Vamos conversar sobre sua ideia!</span>
                     Entre em contato com a gente por qualquer um destes
                     canais</p>
             </div>
 
-            <div class="container--flex">
-                <div class="container--sm">
+            <div class="contact__container">
+                <div class="contact--details">
                     <strong>
                         <p><span>Kaça Falcão</span></p>
                     </strong>
-                    <a href="mailto:contato.kacafalcao@gmail.com">
-                        <p>contato.kacafalcao@gmail.com
-                        </p>
-                    </a>
+                    <p><a class="outline__link"
+                            href="mailto:contato.kacafalcao@gmail.com">contato.kacafalcao@gmail.com</a></p>
                 </div>
 
-                <div class="container--sm">
+                <div class="contact--details">
                     <strong>
                         <p>Felipe <span>Kaça</span></p>
                     </strong>
-                    <a href="mailto:felipekpetersen@gmail.com">
-                        <p> felipekpetersen@gmail.com
-                        </p>
-                    </a>
-                    <a href="tel:+55011973916617">
-                        <p>11 97391-6617
-                        </p>
-                    </a>
+                    <p><a class="outline__link" href="mailto:felipekpetersen@gmail.com">
+                            felipekpetersen@gmail.com
+                        </a>
+                    </p>
+                    <p><a class="outline__link" href="tel:+55011973916617">
+                            11 97391-6617
+                        </a></p>
                 </div>
 
-                <div class="container--sm">
+                <div class="contact--details">
                     <strong>
                         <p>Eloisa <span>Falcão</span></p>
                     </strong>
-                    <a href="mailto:eloisamariafalcao@gmail.com">
-                        <p> eloisamariafalcao@gmail.com</p>
-                    </a>
-                    <a href="tel:+55011957283051">
-                        <p> 11 95728-3051
-                        </p>
-                    </a>
+                    <p><a class="outline__link" href="mailto:eloisamariafalcao@gmail.com">
+                            eloisamariafalcao@gmail.com
+                        </a></p>
+                    <p><a class="outline__link" href="tel:+55011957283051">
+                            11 95728-3051 </a>
+                    </p>
                 </div>
-
             </div>
 
-            <div class="container--center">
-
+            <div class="section__container--description">
                 <p>É desenvolvedor? Venha fazer parte da nossa rede!</p>
                 <!-- button/form freelancers -->
                 <a href="https://airtable.com/shr1HiTVF1j03R3h4"><button>Quero
                         fazer parte!</button></a>
             </div>
-
         </section>
-
     </main>
 
     <!-- footer -->
-    <footer>
-    </footer>
-
+    <!-- scripts -->
 </body>
 
 </html>

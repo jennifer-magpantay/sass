@@ -1,60 +1,59 @@
 .worlds {
     position: relative;
 
-    img {
-        max-width: 100vw;
-        width: auto;
-        height: auto;
-        display: block;
+    // sett the container of the frame as absolute
+    .frame__container {
         position: absolute;
-        top: -8em;
+        z-index: -2;
+        top: 0;
         left: 0;
         right: 0;
-        z-index: -2;
 
-        @include tablet {
-            top: -2em;
+        @include tablet-up {
+            top: -10%;
         }
-           }
+    }
 
-    .container--flex {
-        align-items: flex-start;
-        justify-content: start;
+    // then, to the frame img, add the image as background
+    .frame__img {
+        height: clamp(100vh, 100vw, 1200px);
+        background-image: url("/images/Foguetes.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &__container {
         padding: 0 6%;
-        margin-top: 40%;
+        margin-top: 50%;
+
+        @include tablet-up {
+            margin-top: 45%;
+        }
     }
 
-    .text--freelancers {
-       width: 50%;  
+    .freelancers__text,
+    .companies__text {
+        width: 70%;
 
-       @include tablet {
-        width: 75%; 
-    }            
+        @include tablet-up {
+            width: 50%;
+        }
     }
 
-    .text--companies {
-        width: 50%;
-        margin: 41% 5% 0 auto;
-
+    .companies__text {
+        margin-left: auto;
         p {
             text-align: right;
         }
-        
-        @include tablet {
-            width: 75%; 
-        }
-
-        @include mobile {
-            margin: 0 5% 0 auto;
-        }
     }
+}
 
-    .button--display--sm {
+.button--display--sm {
+    display: inline;
+    margin-bottom: 5%;
+
+    @include tablet-up {
         display: none;
-
-        @include mobile {
-            display: inline;
-            margin-bottom: 5%;
-        }
     }
 }

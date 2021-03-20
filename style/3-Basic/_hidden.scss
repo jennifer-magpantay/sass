@@ -1,5 +1,7 @@
 .hidden {
-    @include mobile {
-        display: none;
+    display: none;
+
+    @include tablet-up {
+        display: inline-flex;
     }
 }
